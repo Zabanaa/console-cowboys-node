@@ -11,7 +11,7 @@ const jobSchema = mongoose.Schema({
         required: true
     },
     company_name: { type: String, required: true },
-    listing_url: { type: String, required: true },
+    listing_url: { type: String, required: true, unique: true},
     is_remote: { type: Boolean, required: true, default: false},
     is_paid: { type: String, required: false, default: false },
     date_added: { type: String, required: true, default: Date.now },
